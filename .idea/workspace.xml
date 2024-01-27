@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/goodsGuru.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/goodsGuru/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/goodsGuru/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/goodsGuru/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/goodsGuru/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/goodsGuru/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/email_notification_template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goodsGuru/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/goodsGuru/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goodsGuru/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/goodsGuru/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/signals.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
@@ -45,9 +49,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,6 +63,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/inventory/templates" />
+      <recent name="$PROJECT_DIR$/inventory" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="goodsGuru" type="Python.DjangoServer" factoryName="Django server">
       <module name="goodsGuru" />
@@ -98,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706283420053</updated>
-      <workItem from="1706283428840" duration="341000" />
+      <workItem from="1706283428840" duration="13872000" />
     </task>
     <servers />
   </component>

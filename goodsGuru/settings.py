@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -55,6 +57,16 @@ NOTIFICATIONS_USE_JSONFIELD = True
 NOTIFICATIONS_JSON_PAYLOADS = True
 NOTIFICATIONS_FROM_EMAIL = 'stephenwanjala@gmai.com'
 
+# Email settings
+EMAIL_BACKEND = config('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
+EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
+EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
+EMAIL_DEBUG = config('EMAIL_DEBUG', default=True, cast=bool)
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,6 +85,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'goodsGuru.wsgi.application'
+AUTH_USER_MODEL = 'inventory.InventoryUser'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
