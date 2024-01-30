@@ -5,16 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventory/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/email_notification_template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Black.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Black.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Black.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-SemiBold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-SemiBold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-SemiBold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Medium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/goodsGuru.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/goodsGuru.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goodsGuru/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/goodsGuru/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goodsGuru/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/goodsGuru/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +64,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
       </list>
@@ -38,32 +80,37 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2bUxNbsdYgohR35Bff5U7PrBa2T" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/wanjala/PycharmProjects/goodsGuru/static&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/inventory/templates" />
       <recent name="$PROJECT_DIR$/inventory" />
@@ -110,7 +157,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706283420053</updated>
-      <workItem from="1706283428840" duration="13872000" />
+      <workItem from="1706283428840" duration="23706000" />
+      <workItem from="1706375988283" duration="1172000" />
+      <workItem from="1706382327005" duration="1992000" />
+      <workItem from="1706619825522" duration="427000" />
     </task>
     <servers />
   </component>
