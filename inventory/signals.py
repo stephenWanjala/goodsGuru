@@ -40,14 +40,25 @@ def handle_sale(sender, instance, created, **kwargs):
         notify.send(stock, recipient=instance.product.responsible_user, verb='Low Stock Notification',
                     description=f'The stock of {instance.product.name} is low. Please order more.')
 
-    # Send email notification
-    if stock.is_low_stock():
+        # Send email notification to responsible user
         send_email_notification(instance.product.responsible_user.email, 'Low Stock Notification',
                                 f'The stock of {instance.product.name} is low. Please order more.')
 
+        # Send email notification to supplier
+        # Get the latest purchase of the product and its supplier
+        latest_purchase = instance.product.purchase_set.order_by('-purchase_date').first()
+        if latest_purchase:
+            send_email_notification(latest_purchase.supplier.email, 'Low Stock Notification',
+                                    f'The stock of {instance.product.name} is low. Please supply more.')
+        else:
+            # Handle the case when there is no purchase record for the product
+            # For example, you can log an error or send a notification to the admin
+            pass
+
 
 def send_email_notification(recipient_email, subject, message):
-    html_message = render_to_string('inventory/email_notification_template.html', {'subject': subject, 'message': message})
+    html_message = render_to_string('inventory/email_notification_template.html',
+                                    {'subject': subject, 'message': message})
     plain_message = strip_tags(html_message)
 
     send_mail(subject, plain_message, 'devwanjala148@gmail.com', [recipient_email], html_message=html_message)

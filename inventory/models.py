@@ -1,12 +1,10 @@
+# models.py
 from django.contrib.auth import get_user_model
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
 from django.utils import timezone
 from notifications.signals import notify
-
-
-# Create your models here.
 
 
 class InventoryUserManager(BaseUserManager):
@@ -100,7 +98,7 @@ class Product(models.Model):
 
 
 class Stock(models.Model):
-    product = models.OneToOneField(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=0)
     low_stock_threshold = models.PositiveIntegerField(default=10)
 
@@ -133,20 +131,7 @@ class Purchase(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-        # Update stock level
-        stock, created = Stock.objects.get_or_create(product=self.product)
-        stock.quantity += self.quantity
-        stock.save()
-
-        # Send notification
-        if self.expiration_date <= timezone.now().date() + timezone.timedelta(weeks=1):
-            notify.send(self.product, recipient=self.product.responsible_user, verb='Expiry Notification: Dispose of',
-                        description=f'{self.product.name} is expiring soon and should be disposed of.')
-        elif self.expiration_date <= timezone.now().date() + timezone.timedelta(weeks=12):
-            notify.send(self.product, recipient=self.product.responsible_user,
-                        verb='Expiry Notification: Priority Placement for',
-                        description=f'{self.product.name} is expiring in 2-3 months and should be given priority '
-                                    f'placement.')
+        # The update_stock signal will take care of updating the stock and sending notifications
 
 
 class Sale(models.Model):
