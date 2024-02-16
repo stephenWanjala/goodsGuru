@@ -4,58 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventory/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Black.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Black.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-SemiBold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-SemiBold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Nunito/Nunito-SemiBold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/Ubuntu/Ubuntu-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/goodsGuru.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/goodsGuru.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goodsGuru/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/goodsGuru/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goodsGuru/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/goodsGuru/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-    </list>
+    <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,6 +110,7 @@
       <workItem from="1706375988283" duration="1172000" />
       <workItem from="1706382327005" duration="1992000" />
       <workItem from="1706619825522" duration="427000" />
+      <workItem from="1706628504665" duration="9302000" />
     </task>
     <servers />
   </component>
