@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
+from django.db.models import ExpressionWrapper, F, IntegerField, Value
 from django.utils import timezone
 from notifications.signals import notify
 
@@ -103,7 +104,14 @@ class Stock(models.Model):
     low_stock_threshold = models.PositiveIntegerField(default=10)
 
     def is_low_stock(self):
-        return self.quantity <= self.low_stock_threshold
+        # Annotate the current quantity and threshold values
+        annotated_stock = Stock.objects.annotate(
+            current_quantity=F('quantity'),
+            current_threshold=Value(self.low_stock_threshold, output_field=IntegerField())
+        ).values('current_quantity', 'current_threshold').get(pk=self.pk)
+
+        # Compare the annotated values
+        return annotated_stock['current_quantity'] <= annotated_stock['current_threshold']
 
     class Meta:
         verbose_name_plural = "Stocks"
