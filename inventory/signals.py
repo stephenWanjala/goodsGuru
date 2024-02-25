@@ -1,7 +1,7 @@
 # inventory/signals.py
 from django.core.mail import send_mail
-from django.db.models import F
 from django.db import transaction
+from django.db.models import F
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.template.loader import render_to_string
@@ -22,7 +22,8 @@ def handle_purchase(sender, instance, created, **kwargs):
         if instance.expiration_date <= timezone.now().date() + timezone.timedelta(weeks=1):
             notify.send(instance.product, recipient=instance.product.responsible_user,
                         verb='Expiry Notification: Dispose of',
-                        description=f'{instance.product.name} is expiring soon and should be disposed of.')
+                        description=f'{instance.product.name} is expiring soon and should be disposed of.',
+                        level='warning')
 
 
 @receiver(post_save, sender=Sale)
@@ -34,7 +35,7 @@ def handle_sale(sender, instance, created, **kwargs):
 
         if stock.is_low_stock():
             notify.send(stock, recipient=instance.product.responsible_user, verb='Low Stock Notification',
-                        description=f'The stock of {instance.product.name} is low. Please order more.')
+                        description=f'The stock of {instance.product.name} is low. Please order more.', level='warning')
 
             # Send email notification to responsible user
             send_email_notification(instance.product.responsible_user.email, 'Low Stock Notification',

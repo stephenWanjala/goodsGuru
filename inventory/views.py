@@ -1,11 +1,13 @@
 from datetime import datetime
 
 from django.contrib import messages
-from django.contrib.auth import login, authenticate
+from django.contrib.admin.models import LogEntry
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
+from notifications.admin import Notification
 
 from inventory.forms import UserCreationForm
 
@@ -45,7 +47,17 @@ def loginPage(request):
 
 @login_required(login_url='login')
 def home(request):
+    user_notifications = Notification.objects.filter(recipient=request.user)
+    recent_actions = LogEntry.objects.all().order_by('-action_time')[:10]  # Fetching 10 most recent actions
     context = {
         'user': request.user,
+        'notifications': user_notifications,
+        'unread_notifications': user_notifications.filter(unread=True),
+        'resent_actions': recent_actions,
     }
     return render(request, 'inventory/home.html', context)
+
+
+def logout_view(request):
+    logout(request)
+    return redirect(to='login')
