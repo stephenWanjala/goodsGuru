@@ -15,15 +15,17 @@ from inventory.models import Purchase, Stock, Sale
 @receiver(post_save, sender=Purchase)
 def handle_purchase(sender, instance, created, **kwargs):
     with transaction.atomic():
-        stock, _ = Stock.objects.get_or_create(product=instance.product)
-        stock.quantity = F('quantity') + instance.quantity
-        stock.save()
+        # Check if the product already exists in stock
+        stock, created = Stock.objects.get_or_create(product=instance.product)
 
-        if instance.expiration_date <= timezone.now().date() + timezone.timedelta(weeks=1):
-            notify.send(instance.product, recipient=instance.product.responsible_user,
-                        verb='Expiry Notification: Dispose of',
-                        description=f'{instance.product.name} is expiring soon and should be disposed of.',
-                        level='warning')
+        # If the product already exists in stock, update the quantity
+        if not created:
+            stock.quantity = F('quantity') + instance.quantity
+        else:
+            # If the product does not exist in stock, set the initial quantity
+            stock.quantity = instance.quantity
+
+        stock.save()
 
 
 @receiver(post_save, sender=Sale)

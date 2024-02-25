@@ -5,170 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/Avatar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-face-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-face-02.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-face-03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-face-03.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-face-04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-face-04.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-face-05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-face-05.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-illustrated-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-illustrated-01.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-illustrated-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-illustrated-02.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-illustrated-03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-illustrated-03.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-illustrated-04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/avatar/avatar-illustrated-04.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/categories/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/categories/01.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/categories/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/categories/02.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/categories/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/categories/03.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/categories/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/categories/04.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/404.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/2 User.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/3-User-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/3-User-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Activity.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/AddUser.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Down2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Down3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-DownCircle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-DownSquare.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Left2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Left3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-LeftCircle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-LeftSquare.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Right2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Right3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-RightCircle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-RightSquare.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Up2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-Up3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-UpCircle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrow-UpSquare.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Arrows-up-down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Bag 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Bag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Bookmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Buy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Call Missed.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Call Silent.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Call.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Calling.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Camera.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Category-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Category-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Chart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Chat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Close Square.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Danger.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Delete.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Discount.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Discovery.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Document-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Document-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Download.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Edit Square.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Edit-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Edit-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Filter 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Filter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Folder-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Folder-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Game.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Graph.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Hide.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Home-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Home-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Image 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Image-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Image-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Info Circle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Info Square.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Location.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Lock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Login.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Logout.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Menu-toggle-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Menu-toggle-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Message-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Message-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/More Circle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/More Square.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Notification-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Notification.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Paper Download.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Paper Fail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Paper Negative.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Paper Plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Paper Upload.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Paper-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Paper-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Password.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Profile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Scan.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Send.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Setting-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Setting-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Settings-line.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Shield Done.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Shield Fail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Show.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Swap.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Tick Square.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Ticket Star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Ticket.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Time Square.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/TimeCircle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Unlock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Upload.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Video.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Voice 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Voice.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Volume Down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Volume Off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Volume Up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Wallet.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Bulk/Work.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/GoogleDrive.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/Logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/baloon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/customers.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/dropbox.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/image-frame.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/move.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/radio.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/thumbnail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/plugins/chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/plugins/feather.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/plugins/feather.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/templates/inventory/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/inventory/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +129,7 @@
       <workItem from="1708408048955" duration="6490000" />
       <workItem from="1708797530473" duration="8437000" />
       <workItem from="1708844749427" duration="250000" />
-      <workItem from="1708845025123" duration="2184000" />
+      <workItem from="1708845025123" duration="10591000" />
     </task>
     <servers />
   </component>

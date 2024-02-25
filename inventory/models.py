@@ -2,8 +2,9 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
+from django.core.exceptions import ValidationError
 from django.db import models
-from django.db.models import ExpressionWrapper, F, IntegerField, Value
+from django.db.models import F, IntegerField, Value
 from django.utils import timezone
 from notifications.signals import notify
 
@@ -80,6 +81,7 @@ class Product(models.Model):
     name = models.CharField(max_length=255)
     category = models.CharField(max_length=30, choices=CATEGORY_CHOICES)
     responsible_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    selling_price = models.DecimalField(max_digits=10, decimal_places=2)
 
     @property
     def expiration_date(self):
@@ -148,12 +150,22 @@ class Purchase(models.Model):
 class Sale(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
-    selling_price = models.DecimalField(max_digits=10, decimal_places=2)
+    selling_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     sale_date = models.DateField(default=timezone.now)
 
     class Meta:
         verbose_name_plural = "Sales"
         verbose_name = "Sale"
+
+    def clean(self):
+        if not self.is_valid_sale():
+            raise ValidationError(f"Not enough stock available for {self.product.name} - Quantity: {self.quantity}")
+        else:
+            self.selling_price = self.product.selling_price * self.quantity
+        super().clean()
+
+    def is_valid_sale(self):
+        return self.product.stock_set.exists() and self.product.stock_set.first().quantity >= self.quantity
 
     def __str__(self):
         return f"{self.product.name} - Quantity: {self.quantity}"
@@ -162,6 +174,7 @@ class Sale(models.Model):
         # Check if there is enough stock available for the sale
         stock, created = Stock.objects.get_or_create(product=self.product)
         if stock.quantity >= self.quantity:
+            self.full_clean()
             super().save(*args, **kwargs)
 
             # Update stock level after a sale

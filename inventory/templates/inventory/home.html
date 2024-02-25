@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <a class="show-cat-btn" href="##">
-                        <span class="icon document" aria-hidden="true"></span>Posts
+                        <span class="icon document" aria-hidden="true"></span>Products
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>
                             <span class="icon arrow-down" aria-hidden="true"></span>
@@ -47,17 +47,17 @@
                     </a>
                     <ul class="cat-sub-menu">
                         <li>
-                            <a href="posts.html">All Posts</a>
+                            <a href="">Products</a>
                         </li>
                         <li>
-                            <a href="new-post.html">Add new post</a>
+                            <a href="">Add new Products</a>
                         </li>
                     </ul>
                 </li>
 
                 <li>
                     <a class="show-cat-btn" href="##">
-                        <span class="icon paper" aria-hidden="true"></span>Pages
+                        <span class="icon paper" aria-hidden="true"></span>Sales
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>
                             <span class="icon arrow-down" aria-hidden="true"></span>
@@ -75,9 +75,9 @@
                 <li>
                     <a href="">
                         <span class="icon message" aria-hidden="true"></span>
-                        Comments
+                        Notifications
                     </a>
-                    <span class="msg-counter">7</span>
+                    <span class="msg-counter">{{ unread_notifications.count }}</span>
                 </li>
 
             </ul>
@@ -480,7 +480,7 @@
                   	<li>
                   <a href="##">
                     <div class="top-cat-list__title">
-                      {{ resent_action.get_next_by_action_time }} <span>{{ resent_action.action_time }}</span>
+                      {{ resent_action.get_next_by_action_time }} <span> {{ resent_action.action_time|timesince }} ago</span>
                     </div>
                     <div class="top-cat-list__subtitle">
                        {{ resent_action.get_action_flag_display }} <span class="purple">{{ resent_action.content_type  }}</span>
