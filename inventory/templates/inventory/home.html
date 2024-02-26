@@ -1,3 +1,4 @@
+{% load custom_filters %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -179,14 +180,8 @@
                 <i data-feather="bar-chart-2" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
-                <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit success">
-                    <i data-feather="trending-up" aria-hidden="true"></i>4.07%
-                  </span>
-                  Last month
-                </p>
+                <p class="stat-cards-info__num">{{ today_sales.count }}</p>
+                <p class="stat-cards-info__title">Today's Sales</p>
               </div>
             </article>
           </div>
@@ -196,14 +191,14 @@
                 <i data-feather="file" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
-                <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit success">
-                    <i data-feather="trending-up" aria-hidden="true"></i>0.24%
-                  </span>
-                  Last month
-                </p>
+                <p class="stat-cards-info__num">{{ total_sales }}</p>
+                <p class="stat-cards-info__title">Total Sales</p>
+{#                <p class="stat-cards-info__progress">#}
+{#                  <span class="stat-cards-info__profit success">#}
+{#                    <i data-feather="trending-up" aria-hidden="true"></i>0.24%#}
+{#                  </span>#}
+{#                  Last month#}
+{#                </p>#}
               </div>
             </article>
           </div>
@@ -213,11 +208,19 @@
                 <i data-feather="file" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
+                <p class="stat-cards-info__num">{{ total_revenue }}</p>
+                <p class="stat-cards-info__title">Total Revenue</p>
                 <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit danger">
-                    <i data-feather="trending-down" aria-hidden="true"></i>1.64%
+                  <span class="stat-cards-info__profit {% if trend %}
+                  	{% if trend == "up" %}
+                  		success
+                  	{% else %}
+                  		danger
+                  	{% endif %}
+                  {% else %}
+
+                  {% endif %} ">
+                    <i data-feather="trending-up" aria-hidden="true"></i>{{ percentage_change }}%
                   </span>
                   Last month
                 </p>
@@ -230,14 +233,14 @@
                 <i data-feather="feather" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
-                <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit warning">
-                    <i data-feather="trending-up" aria-hidden="true"></i>0.00%
-                  </span>
-                  Last month
-                </p>
+                <p class="stat-cards-info__num">{{ low_stock_products.count }}</p>
+                <p class="stat-cards-info__title">Low In stock </p>
+{#                <p class="stat-cards-info__progress">#}
+{#                  <span class="stat-cards-info__profit warning">#}
+{#                    <i data-feather="trending-up" aria-hidden="true"></i>0.00%#}
+{#                  </span>#}
+{#                  Last month#}
+{#                </p>#}
               </div>
             </article>
           </div>
@@ -248,38 +251,33 @@
               <table class="posts-table">
                 <thead>
                   <tr class="users-table-info">
-                    <th>
-                      <label class="users-table__checkbox ms-20">
-                        <input type="checkbox" class="check-all">Thumbnail
-                      </label>
-                    </th>
-                    <th>Title</th>
-                    <th>Author</th>
+                    <th>Product</th>
+                    <th>product Supervisor</th>
                     <th>Status</th>
                     <th>Date</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  {% for stock_item in stock %}
+                  	<tr>
                     <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="{% static '/img/categories/01.webp' %}" type="image/webp"><img src="./img/categories/01.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      Starting your traveling blog with Vasco
+                     {{ stock_item.product.name }}
                     </td>
                     <td>
                       <div class="pages-table-img">
-                        <picture><source srcset="{% static '/img/avatar/avatar-face-04.webp' %}" type="image/webp"><img src="./img/avatar/avatar-face-04.png" alt="User Name"></picture>
-                        Jenny Wilson
+                        <picture><source srcset="{% static '/img/avatar/avatar-face-04.webp' %}" type="image/webp"><img src="{% static '/img/avatar/avatar-face-04.png' %}" alt="{{ stock_item.product.first_name }}"></picture>
+                       {{ stock_item.product.responsible_user.get_full_name }}
                       </div>
                     </td>
-                    <td><span class="badge-pending">Pending</span></td>
+                    <td>
+                        {% if stock_item.is_low_stock %}
+                        	<span class="badge-warning p-2">Low stock ~ {{ product_quantities|get_item:stock_item.product.name|default:"N/A" }}</span>
+                        {% else %}
+                            <span class="badge-success p-2">Available~ {{ product_quantities|get_item:stock_item.product.name|default:"N/A" }}</span>
+                            </td>
+                        {% endif %}
+
                     <td>17.04.2021</td>
                     <td>
                       <span class="p-relative">
@@ -295,176 +293,9 @@
                       </span>
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="{% static 'img/categories/02.webp' %}" type="image/webp"><img src="{% static 'img/categories/02.jpg' %}" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      Start a blog to reach your creative peak
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="{% static 'img/avatar/avatar-face-03.webp' %}" type="image/webp"><img src="{% static 'img/avatar/avatar-face-03.png' %}" alt="User Name"></picture>
-                        Annette Black
-                      </div>
-                    </td>
-                    <td><span class="badge-pending">Pending</span></td>
-                    <td>23.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="{% static 'img/categories/03.webp' %}" type="image/webp"><img src="{% static 'img/categories/03.jpg' %}" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      Helping a local business reinvent itself
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="{% static 'img/avatar/avatar-face-02.webp' %}" type="image/webp"><img src="{% static 'img/avatar/avatar-face-02.png' %}" alt="User Name"></picture>
-                        Kathryn Murphy
-                      </div>
-                    </td>
-                    <td><span class="badge-active">Active</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="{% static 'img/categories/04.webp' %}" type="image/webp"><img src="./img/categories/04.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      Caring is the new marketing
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="{% static '/img/avatar/avatar-face-05.webp' %}" type="image/webp"><img src="./img/avatar/avatar-face-05.png" alt="User Name"></picture>
-                        Guy Hawkins
-                      </div>
-                    </td>
-                    <td><span class="badge-active">Active</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="{% static '/img/categories/01.webp' %}" type="image/webp"><img src="{% static '/img/categories/01.jpg' %}" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      How to build a loyal community online and offline
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="{% static '/img/avatar/avatar-face-03.webp' %}" type="image/webp"><img src="./img/avatar/avatar-face-03.png" alt="User Name"></picture>
-                        Robert Fox
-                      </div>
-                    </td>
-                    <td><span class="badge-active">Active</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="{% static '/img/categories/03.webp' %}" type="image/webp"><img src="./img/categories/03.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      How to build a loyal community online and offline
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="{% static '/img/avatar/avatar-face-03.webp' %}" type="image/webp"><img src="./img/avatar/avatar-face-03.png" alt="User Name"></picture>
-                        Robert Fox
-                      </div>
-                    </td>
-                    <td><span class="badge-active">Active</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
+                  {% endfor %}
+
+
                 </tbody>
               </table>
             </div>
@@ -473,7 +304,7 @@
             <article class="white-block">
               <div class="top-cat-title">
                 <h3>Resent Actions</h3>
-                <p>Here Are {{ resent_actions.count }} Most Resent ops by {{ user.get_full_name }}</p>
+                <p>{{ resent_actions.count }} Most Resent ops by {{ user.get_full_name }}</p>
               </div>
               <ul class="top-cat-list">
                   {% for resent_action in resent_actions %}

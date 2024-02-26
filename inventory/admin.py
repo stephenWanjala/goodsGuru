@@ -31,13 +31,13 @@ class SupplierAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name', 'category', 'responsible_user']
+    list_display = ['name', 'category', 'responsible_user', 'selling_price']
     search_fields = ['name', 'category', 'responsible_user']
     list_filter = ['name']
     list_per_page = 10
     ordering = ['name']
     fieldsets = [
-        ('Product Information', {'fields': ['name', 'category', 'responsible_user']}),
+        ('Product Information', {'fields': ['name', 'category', 'responsible_user', 'selling_price']}),
     ]
 
 
@@ -74,5 +74,5 @@ class SaleAdmin(admin.ModelAdmin):
     list_per_page = 10
     ordering = ['product']
     fieldsets = [
-        ('Sale Information', {'fields': ['product', 'quantity', 'selling_price', 'sale_date']}),
+        ('Sale Information', {'fields': ['product', 'quantity',  'sale_date']}),
     ]

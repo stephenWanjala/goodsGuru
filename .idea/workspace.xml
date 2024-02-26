@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="">
+    <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="- Product to hold its selling price&#10;- Stock to have one instance for same product">
+      <change afterPath="$PROJECT_DIR$/inventory/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templatetags/custom_filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goodsGuru/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/goodsGuru/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/templates/inventory/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/inventory/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,16 +28,30 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "stephenWanjala"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3f79dcf0-98b6-476c-950f-8d935caa6bce" />
+        <option name="url" value="https://github.com/stephenWanjala/goodsGuru.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,6 +93,7 @@
       <recent name="$PROJECT_DIR$/static/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/inventory/templatetags" />
       <recent name="$PROJECT_DIR$/inventory/templates" />
       <recent name="$PROJECT_DIR$/inventory" />
     </key>
@@ -129,11 +148,24 @@
       <workItem from="1708408048955" duration="6490000" />
       <workItem from="1708797530473" duration="8437000" />
       <workItem from="1708844749427" duration="250000" />
-      <workItem from="1708845025123" duration="10591000" />
+      <workItem from="1708845025123" duration="23838000" />
     </task>
+    <task id="LOCAL-00001" summary="- Product to hold its selling price&#10;- Stock to have one instance for same product">
+      <option name="closed" value="true" />
+      <created>1708887696826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708887696826</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- Product to hold its selling price&#10;- Stock to have one instance for same product" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Product to hold its selling price&#10;- Stock to have one instance for same product" />
   </component>
 </project>

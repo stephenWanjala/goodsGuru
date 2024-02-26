@@ -187,4 +187,4 @@ class Sale(models.Model):
                             description=f'The stock of {self.product.name} is low. Please order more.')
 
         else:
-            raise ValueError(f"Not enough stock available for {self.product.name} - Quantity: {self.quantity}")
+            raise ValidationError(f"Not enough stock available for {self.product.name} - Quantity: {self.quantity}")
