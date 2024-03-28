@@ -1,0 +1,6 @@
+<!-- inventory/make_sale_form.html -->
+<form method="post" action="{% url 'make_sale' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

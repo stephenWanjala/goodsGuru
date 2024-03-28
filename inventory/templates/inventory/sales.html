@@ -1,0 +1,47 @@
+{% extends 'inventory/home_partial.html' %}
+
+{% block partialContent %}
+    <div class="col-lg-9">
+        <div class="users-table table-wrapper">
+            <table class="posts-table">
+                <thead>
+                <tr class="users-table-info">
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Sale Date</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for sale in sales %}
+                    <tr>
+                        <td>
+                            {{ sale.product.name }}
+                        </td>
+                        <td>{{ sale.quantity }}</td>
+                        <td>{{ sale.selling_price }}</td>
+
+                        <td>{{ sale.sale_date }}</td>
+                        {% if request.user.is_superuser %}
+                            <td>
+                      <span class="p-relative">
+                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
+
+                          <i data-feather="delete" aria-hidden="true"></i>
+                        </button>
+
+                      </span>
+                            </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+     {% include 'inventory/recent_actions.html' %}
+{% endblock %}

@@ -57,7 +57,7 @@ ROOT_URLCONF = 'goodsGuru.urls'
 
 NOTIFICATIONS_USE_JSONFIELD = True
 NOTIFICATIONS_JSON_PAYLOADS = True
-NOTIFICATIONS_FROM_EMAIL = 'stephenwanjala@gmai.com'
+NOTIFICATIONS_FROM_EMAIL = 'stephenwanjala@gmail.com'
 
 # Email settings
 EMAIL_BACKEND = config('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
@@ -81,6 +81,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'inventory.context_processors.inventory_context',
             ],
         },
     },

@@ -1,0 +1,23 @@
+<div class="col-lg-3">
+            <article class="white-block">
+              <div class="top-cat-title">
+                <h3>Resent Actions</h3>
+                <p>{{ resent_actions.count }} Most Resent ops by {{ user.get_full_name }}</p>
+              </div>
+              <ul class="top-cat-list">
+                  {% for resent_action in resent_actions %}
+                  	<li>
+                  <a href="##">
+                    <div class="top-cat-list__title">
+                      {{ resent_action.get_next_by_action_time }} <span> {{ resent_action.action_time|timesince }} ago</span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                       {{ resent_action.get_action_flag_display }} <span class="purple">{{ resent_action.content_type  }}</span>
+                    </div>
+                  </a>
+                </li>
+                  {% endfor %}
+
+              </ul>
+            </article>
+          </div>
