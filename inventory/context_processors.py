@@ -21,18 +21,20 @@ def inventory_context(request):
 
         # Summary statistics
         total_sales = Sale.objects.count()
-        total_revenue = Sale.objects.aggregate(total_revenue=Sum('selling_price'))['total_revenue'] or 0
+        total_revenue = round(Sale.objects.aggregate(total_revenue=Sum('selling_price'))['total_revenue'] or 0, 2)
         low_stock_products = Product.objects.filter(stock__quantity__lte=F('stock__low_stock_threshold'))
         recent_sales = Sale.objects.order_by('-sale_date')[:10]
 
         # Sales trends
-        current_month_revenue = \
+        current_month_revenue = round(
             Sale.objects.filter(sale_date__month=timezone.now().month).aggregate(total_revenue=Sum('selling_price'))[
-                'total_revenue'] or 0
-        previous_month_revenue = \
+                'total_revenue'] or 0, 2
+        )
+        previous_month_revenue = round(
             Sale.objects.filter(sale_date__month=timezone.now().month - 1).aggregate(
                 total_revenue=Sum('selling_price'))[
-                'total_revenue'] or 0
+                'total_revenue'] or 0, 2
+        )
 
         trend = None
         percentage_change = 0
@@ -52,6 +54,7 @@ def inventory_context(request):
 
         # Today's sales
         today_sales = Sale.objects.filter(sale_date=timezone.now().date())
+        percentage_change = round(percentage_change, 2)
 
         # Product sales percentage
         product_sales_percentage = {}

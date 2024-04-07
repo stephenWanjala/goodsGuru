@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="- Product to hold its selling price&#10;- Stock to have one instance for same product">
-      <change afterPath="$PROJECT_DIR$/inventory/context_processors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/home_partial.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/main_nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/make_sale_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/notifications.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/products_listing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/recent_actions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/sales.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/inventory/stats_cards.html" afterDir="false" />
+    <list default="true" id="20dd2d65-03c7-4085-8ea8-55ac78a4175c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goodsGuru/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/goodsGuru/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/templates/inventory/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/inventory/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/context_processors.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +66,7 @@
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/wanjala/PycharmProjects/goodsGuru/static&quot;,
@@ -160,6 +146,9 @@
       <workItem from="1709025026786" duration="1090000" />
       <workItem from="1709894991188" duration="1131000" />
       <workItem from="1711624580258" duration="1411000" />
+      <workItem from="1711642784007" duration="5405000" />
+      <workItem from="1711696695777" duration="752000" />
+      <workItem from="1712048542771" duration="727000" />
     </task>
     <task id="LOCAL-00001" summary="- Product to hold its selling price&#10;- Stock to have one instance for same product">
       <option name="closed" value="true" />
@@ -169,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708887696826</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add context_processors.py">
+      <option name="closed" value="true" />
+      <created>1711647121833</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711647121833</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +174,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Product to hold its selling price&#10;- Stock to have one instance for same product" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Product to hold its selling price&#10;- Stock to have one instance for same product" />
+    <MESSAGE value="Add context_processors.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add context_processors.py" />
   </component>
 </project>
