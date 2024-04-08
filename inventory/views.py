@@ -11,7 +11,7 @@ from django.views.generic import CreateView
 from notifications.admin import Notification
 
 from inventory.forms import UserCreationForm, SaleForm, ProductForm
-from inventory.models import Sale, Stock
+from inventory.models import Sale, Stock, Product
 
 
 # Create your views here.
@@ -60,10 +60,10 @@ def home(request):
     stock = Stock.objects.all()
 
     context = {
-            'stock': stock,
-            'main_title': 'Products Dashboard',
-            'form': form
-     }
+        'stock': stock,
+        'main_title': 'Goods Guru Stock',
+        'form': form
+    }
     return render(request, 'inventory/home.html', context)
 
 
@@ -123,6 +123,24 @@ def sales(request):
         'main_title': 'Sales Dashboard'
     }
     return render(request, 'inventory/sales.html', context)
+
+
+@login_required(login_url='login')
+def products_listing(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(to='products')
+    else:
+        form = ProductForm()
+    products = Product.objects.all()
+    context = {
+        'products': products,
+        'form': form,
+        'main_title': 'Products Dashboard'
+    }
+    return render(request, 'inventory/products.html', context=context)
 
 
 @login_required(login_url='login')

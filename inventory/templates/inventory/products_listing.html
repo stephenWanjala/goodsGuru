@@ -2,7 +2,7 @@
 {% load static %}
 <div class="col-lg-9">
  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Goods Guru Stock Overview</h1>
+        <h1 class="h3 mb-0 text-gray-800">Products Dashboard</h1>
         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-bs-toggle="modal"
            data-bs-target="#makeSaleModal"><i
                 class="fas fa-plus fa-sm text-white-50"></i> Add A Product</a>
@@ -14,37 +14,30 @@
             <tr class="users-table-info">
                 <th>Product</th>
                 <th>product Supervisor</th>
-                <th>Status</th>
-                <th>Expiry</th>
+                <th>Category</th>
+                <th>Selling Price</th>
                 {% if request.user.is_superuser %}
                     <th>Actions</th>
                 {% endif %}
             </tr>
             </thead>
             <tbody>
-            {% for stock_item in stock %}
+            {% for product in products %}
                 <tr>
                     <td>
-                        {{ stock_item.product.name }}
+                        {{ product.name }}
                     </td>
                     <td>
                         <div class="pages-table-img">
-                            <picture>
-                                <source srcset="{% static '/img/avatar/avatar-face-04.webp' %}" type="image/webp">
-                                <img src="{% static '/img/avatar/avatar-face-04.png' %}"
-                                     alt="{{ stock_item.product.first_name }}"></picture>
-                            {{ stock_item.product.responsible_user.get_full_name }}
+                            {{ product.responsible_user.get_full_name }}
                         </div>
                     </td>
-                    <td>
-                        {% if stock_item.is_low_stock %}
-                            <span class="badge-warning ">Low stock ~ {{ product_quantities|get_item:stock_item.product.name|default:"N/A" }}</span>
-                        {% else %}
-                            <span class="badge-success ">Available~ {{ product_quantities|get_item:stock_item.product.name|default:"N/A" }}</span>
-                            </td>
-                        {% endif %}
 
-                    <td>{{ stock_item.product.expiration_date }}</td>
+                    <td>
+                        {{ product.category }}
+                    </td>
+
+                    <td>KES. {{ product.selling_price }}</td>
                     {% if request.user.is_superuser %}
                         <td>
                       <span class="p-relative">
