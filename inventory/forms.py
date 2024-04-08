@@ -41,6 +41,19 @@ class SaleForm(forms.ModelForm):
         model = Sale
         fields = ['product', 'quantity']
         widgets = {
-            'product': forms.Select(attrs={'class': 'form-select'}),
-            'quantity': forms.NumberInput(attrs={'class': 'form-control', 'min': '1'}),
+            'product': forms.Select(attrs={'class': 'form-select mb-3 form-control', 'placeholder': 'Select a product'}),
+            'quantity': forms.NumberInput(attrs={'class': 'form-control mb-2 ', 'min': '1'}),
+        }
+
+
+class ProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ['name', 'category', 'responsible_user', 'selling_price']
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter product name'}),
+            'category': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Select category'}),
+            'responsible_user': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Select responsible user'}),
+            'selling_price': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter selling price'}),
         }

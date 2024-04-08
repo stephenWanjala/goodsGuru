@@ -1,14 +1,16 @@
 from datetime import datetime
 
 from django.contrib import messages
+from django.contrib.admin.models import LogEntry, ADDITION
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.contenttypes.models import ContentType
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from notifications.admin import Notification
 
-from inventory.forms import UserCreationForm, SaleForm
+from inventory.forms import UserCreationForm, SaleForm, ProductForm
 from inventory.models import Sale, Stock
 
 
@@ -47,12 +49,21 @@ def loginPage(request):
 
 @login_required(login_url='login')
 def home(request):
+    if request.method == "POST":
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(to='home')
+    else:
+        form = ProductForm()
+
     stock = Stock.objects.all()
 
     context = {
-        'stock': stock,
-        'main_title': 'Products Dashboard'
-    }
+            'stock': stock,
+            'main_title': 'Products Dashboard',
+            'form': form
+     }
     return render(request, 'inventory/home.html', context)
 
 
@@ -87,33 +98,31 @@ def mark_all_as_read(request):
 
 @login_required(login_url='login')
 def sales(request):
-    sales = Sale.objects.all()
-    # recent_actions = LogEntry.objects.all().order_by('-action_time')[:10]  # Fetching 10 most recent actions
-    context = {
-        'sales': sales,
-        # 'recent_actions': recent_actions,
-        'currentYear': datetime.now().year,
-        'main_title': 'Sales'
-    }
-    return render(request, 'inventory/sales.html', context)
-
-
-@login_required(login_url='login')
-def make_sale(request):
     if request.method == 'POST':
         form = SaleForm(request.POST)
         if form.is_valid():
-            sale = form.save(commit=False)
-            try:
-                sale.save()
-                return redirect('sales')  # Redirect to sales page after successful sale
-            except Exception as e:
-                # Handle database-related exceptions, if necessary
-                form.add_error(None, "An error occurred while processing the sale. Please try again later.")
+            sale = form.save()
+            # Create a LogEntry to log the sale creation action
+            content_type = ContentType.objects.get_for_model(sale)
+            LogEntry.objects.create(
+                user_id=request.user.id,
+                content_type_id=content_type.id,
+                object_id=sale.id,
+                object_repr=str(sale),
+                action_flag=ADDITION,
+                change_message=f'Sale added - Product: {sale.product}, Quantity: {sale.quantity}, Amount: {sale.selling_price}',
+                action_time=sale.sale_date,
+            )
+            return redirect(to='home')
     else:
         form = SaleForm()
-
-    return render(request, 'inventory/make_sale_form.html', {'form': form})
+    sales = Sale.objects.all()
+    context = {
+        'sales': sales,
+        'form': form,
+        'main_title': 'Sales Dashboard'
+    }
+    return render(request, 'inventory/sales.html', context)
 
 
 @login_required(login_url='login')

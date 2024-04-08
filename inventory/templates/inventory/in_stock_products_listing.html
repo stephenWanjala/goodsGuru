@@ -1,6 +1,13 @@
 {% load custom_filters %}
 {% load static %}
 <div class="col-lg-9">
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Products Dashboard</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-bs-toggle="modal"
+           data-bs-target="#makeSaleModal"><i
+                class="fas fa-plus fa-sm text-white-50"></i> Add A Product</a>
+    </div>
+{% include 'inventory/make_product_modal.html' %}
     <div class="users-table table-wrapper">
         <table class="posts-table">
             <thead>
@@ -9,7 +16,9 @@
                 <th>product Supervisor</th>
                 <th>Status</th>
                 <th>Expiry</th>
-                <th>Action</th>
+                {% if request.user.is_superuser %}
+                    <th>Actions</th>
+                {% endif %}
             </tr>
             </thead>
             <tbody>

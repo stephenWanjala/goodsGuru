@@ -1,7 +1,17 @@
 {% extends 'inventory/home_partial.html' %}
 
 {% block partialContent %}
+
     <div class="col-lg-9">
+{#    make sales button #}
+     <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Sales Dashboard</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-bs-toggle="modal"
+           data-bs-target="#makeSaleModal"><i
+                class="fas fa-plus fa-sm text-white-50"></i> Add Sale</a>
+    </div>
+        {% include 'inventory/make_sale_modal.html' %}
+
         <div class="users-table table-wrapper">
             <table class="posts-table">
                 <thead>
@@ -10,7 +20,9 @@
                     <th>Quantity</th>
                     <th>Price</th>
                     <th>Sale Date</th>
-                    <th>Action</th>
+                    {% if request.user.is_superuser %}
+                        <th>Action</th>
+                    {% endif %}
                 </tr>
                 </thead>
                 <tbody>
@@ -44,4 +56,5 @@
     </div>
 
      {% include 'inventory/recent_actions.html' %}
+
 {% endblock %}

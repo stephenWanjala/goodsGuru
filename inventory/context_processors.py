@@ -16,8 +16,7 @@ def inventory_context(request):
         user_notifications = Notification.objects.filter(recipient=request.user)
         unread_notifications = user_notifications.filter(unread=True)
 
-        recent_actions = LogEntry.objects.filter(user=request.user).order_by('-action_time')[
-                         :10]  # Fetching 10 most recent actions
+        recent_actions = LogEntry.objects.filter(user=request.user).order_by('-action_time')[:10]
 
         # Summary statistics
         total_sales = Sale.objects.count()
